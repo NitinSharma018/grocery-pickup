@@ -1,0 +1,166 @@
+.home-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 16px;
+  background-image: url('https://www.shutterstock.com/image-photo/supermarket-store-aisle-interior-abstract-600nw-2456378873.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 24px rgba(0, 128, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Semi-transparent white overlay to improve readability */
+.home-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+.home-heading {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #1e3a1d;
+  text-shadow: 1px 1px #c3f0c3;
+  position: relative;
+  z-index: 1;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.info-card {
+  background: linear-gradient(to bottom right, #ffffff, #f0fff0);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 128, 0, 0.1);
+  border: 1px solid #d1fae5;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Optional light grocery leaf icon inside card */
+.info-card::after {
+  content: "";
+  background-image: url('https://www.svgrepo.com/show/21063/leaf.svg');
+  background-repeat: no-repeat;
+  background-size: 80px;
+  opacity: 0.05;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.info-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 128, 0, 0.2);
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(30deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.info-card img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  z-index: 1;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.info-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #10b981;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.5;
+  z-index: 1;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #f59e0b;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 999px;
+  animation: pop 0.6s ease-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-heading {
+    font-size: 28px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .info-card h3 {
+    font-size: 18px;
+  }
+
+  .info-card p {
+    font-size: 14px;
+  }
+}
