@@ -12,7 +12,6 @@ Users can browse products, add items to cart, register/login, and place grocery 
 * 🛒 Add to Cart Functionality
 * 💳 Checkout System
 * 👤 User Dashboard
-* 🧑‍💼 Admin Dashboard
 * 🔎 Search Functionality
 * 📱 Responsive UI Design
 * ⚡ Fast Performance using Vite
@@ -26,7 +25,6 @@ Users can browse products, add items to cart, register/login, and place grocery 
 * Vite
 * Firebase
 * React Router DOM
-* Context API
 * CSS / Tailwind CSS
 
 ---
